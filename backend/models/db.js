@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-mongoose.connect("mongodb://127.0.0.1:27017/todosApp").then(()=>{
+mongoose.connect(process.env.DATABASE_URI).then(()=>{
     console.log("db is ready to use");
     
 }).catch((err)=>{
