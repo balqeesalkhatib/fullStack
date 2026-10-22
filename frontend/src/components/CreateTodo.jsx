@@ -5,7 +5,7 @@ const CreateTodo = ({setTodos}) => {
   const [task, setTask] = useState("");
   const addTodo = () => {
     axios
-      .post("http://localhost:5000/todos/", { task: task })
+      .post("https://fullstack-1-8ats.onrender.com/todos/", { task: task })
       .then((result) => {
          console.log(result.data);
         setTodos((prevTodos)=>{

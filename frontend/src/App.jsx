@@ -5,7 +5,7 @@ import CreateTodo from "./components/CreateTodo";
 const App = () => {
   const [todos,setTodos]=useState([])
   const deleteTodo=(id)=>{
-    axios.delete(`http://localhost:5000/todos/${id}`).then((result)=>{
+    axios.delete(`https://fullstack-1-8ats.onrender.com/todos/${id}`).then((result)=>{
       console.log(result);
        setTodos((preTodos) => {
           return preTodos.filter((elem, i) => {
@@ -20,7 +20,7 @@ const App = () => {
 
   }
   useEffect(()=>{
-    axios.get(" http://localhost:5000/todos/").then((result)=>{
+    axios.get("https://fullstack-1-8ats.onrender.com/todos/").then((result)=>{
       console.log(result.data.result);
       setTodos(result.data.result)
     }).catch((err)=>{
